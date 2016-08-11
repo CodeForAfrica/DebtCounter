@@ -4,4 +4,9 @@
 @import "colors";
 @import "default";
 
-
+.counter {
+  font-size: 40px;
+  #counter-numbers {
+    font-size: 1.5em;
+  }
+}

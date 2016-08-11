@@ -3,7 +3,7 @@
  */
 
 DebtCounter.counter = {
-  id: 'counter',
+  id: 'counter-numbers',
   element: '',
   initial: 3312105.52 * DebtCounter.data.million,
 
@@ -62,7 +62,7 @@ DebtCounter.counter.amount.calculate = function () {
 
   this.current = this.current + (rate.amount * (diff / rate.time));
 
-  DebtCounter.counter.count = setInterval(DebtCounter.counter.update, 1);
+  DebtCounter.counter.count = setInterval(DebtCounter.counter.update, DebtCounter.counter.rate.time);
 
   // console.log(DebtCounter.counter.rate.amount);
 
