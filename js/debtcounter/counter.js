@@ -8,7 +8,7 @@ DebtCounter.counter = {
   initial: 3312105.52 * DebtCounter.data.million,
 
   rate: {
-    time: 1,   // Time between change in milliseconds
+    time: 100,   // Time between change in milliseconds
     amount: 1, // Amount to change within time above
     calculate: function () {}
   },
@@ -62,9 +62,8 @@ DebtCounter.counter.amount.calculate = function () {
 
   this.current = this.current + (rate.amount * (diff / rate.time));
 
+  // Counter
   DebtCounter.counter.count = setInterval(DebtCounter.counter.update, DebtCounter.counter.rate.time);
-
-  // console.log(DebtCounter.counter.rate.amount);
 
 };
 
@@ -75,8 +74,3 @@ DebtCounter.counter.update = function () {
   DebtCounter.counter.element.innerHTML = numberWithCommas(amount);
 };
 
-
-
-function numberWithCommas(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-};

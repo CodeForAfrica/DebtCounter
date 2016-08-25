@@ -1,1 +1,24 @@
 @import 'cover';
+
+footer {
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 30px;
+
+  .logos {
+    padding-top: 30px;
+    img {
+      height: 60px;
+      margin: 0 10px 10px;
+    }
+  }
+
+  ul {
+    padding-top: 10px;
+    list-style-type: square;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  
+}

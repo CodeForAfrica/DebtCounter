@@ -5,6 +5,8 @@ var DebtCounter = {
    
 };
 
+{% include_relative debtcounter/utilities.js %}
+
 {% include_relative debtcounter/data.js %}
 
 {% include_relative debtcounter/counter.js %}
